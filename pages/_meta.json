@@ -1,14 +1,12 @@
 {
   "index": "Introduction",
-  "fundamentals": "Fundamentals",
   "planets": "Planets (Grahas)",
   "signs": "Signs (Rashis)",
   "houses": "Houses (Bhavas)",
   "nakshatras": "Nakshatras (27 Lunar Mansions)",
   "yogas": "Yogas",
   "dashas": "Dashas",
-  "reference": "📝 Quick Reference",
-  "research": "📚 Research",
-  "wiki": "📖 Wiki"
+  "research": "Research",
+  "wiki": "Wiki"
 }
 

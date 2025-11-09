@@ -1,0 +1,69 @@
+# Vedic Astrology Documentation Rules
+
+## Hindi Names for Planets and Rashis
+
+Always use Hindi names (in Devanagari script) with English translations when referring to planets and zodiac signs:
+
+### Planets (Grahas)
+- Sun = <span className="hindi">सूर्य</span> (Surya)
+- Moon = <span className="hindi">चंद्र</span> (Chandra)
+- Mars = <span className="hindi">मंगल</span> (Mangala)
+- Mercury = <span className="hindi">बुध</span> (Budha)
+- Jupiter = <span className="hindi">गुरु</span> (Guru)
+- Venus = <span className="hindi">शुक्र</span> (Shukra)
+- Saturn = <span className="hindi">शनि</span> (Shani)
+- Rahu = <span className="hindi">राहु</span> (Rahu)
+- Ketu = <span className="hindi">केतु</span> (Ketu)
+
+### Zodiac Signs (Rashis)
+- Aries = <span className="hindi">मेष</span> (Mesha)
+- Taurus = <span className="hindi">वृषभ</span> (Vrishabha)
+- Gemini = <span className="hindi">मिथुन</span> (Mithuna)
+- Cancer = <span className="hindi">कर्क</span> (Karka)
+- Leo = <span className="hindi">सिंह</span> (Simha)
+- Virgo = <span className="hindi">कन्या</span> (Kanya)
+- Libra = <span className="hindi">तुला</span> (Tula)
+- Scorpio = <span className="hindi">वृश्चिक</span> (Vrishchika)
+- Sagittarius = <span className="hindi">धनु</span> (Dhanu)
+- Capricorn = <span className="hindi">मकर</span> (Makara)
+- Aquarius = <span className="hindi">कुंभ</span> (Kumbha)
+- Pisces = <span className="hindi">मीन</span> (Meena)
+
+### Nakshatras
+Keep nakshatra names in Hindi when used in context.
+
+## Usage Guidelines
+
+1. First mention: Use both Hindi and English with translation
+   Example: <span className="hindi">गुरु</span> (Jupiter)
+
+2. Subsequent mentions: Use Hindi name only
+   Example: <span className="hindi">गुरु</span>
+
+3. In tables: Use Hindi names with className="hindi" styling
+
+4. Hindi text styling: Always wrap Hindi text in <span className="hindi">...</span>
+
+5. Technical terms in Hindi should also be styled:
+   - <span className="hindi">दशा</span> (Dasha)
+   - <span className="hindi">योग</span> (Yoga)
+   - <span className="hindi">दृष्टि</span> (Drishti)
+   - <span className="hindi">ग्रह</span> (Graha)
+   - <span className="hindi">राशि</span> (Rashi)
+
+## CSS Styling
+
+Hindi text is styled via globals.css:
+```css
+.hindi {
+  font-weight: 500;
+  color: #667eea;
+}
+
+.dark .hindi {
+  color: #a78bfa;
+}
+```
+
+Purple in light mode, light purple in dark mode.
+

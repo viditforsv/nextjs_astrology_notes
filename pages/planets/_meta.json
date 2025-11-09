@@ -8,6 +8,10 @@
   "venus": "Venus (Shukra)",
   "saturn": "Saturn (Shani)",
   "rahu": "Rahu",
-  "ketu": "Ketu"
+  "ketu": "Ketu",
+  "drishti": "Drishti (Aspects)",
+  "retrograde-combustion": "Retrograde & Combustion",
+  "planetary-states": "Planetary States (Avasthas)",
+  "general-notes": "General Notes"
 }
 

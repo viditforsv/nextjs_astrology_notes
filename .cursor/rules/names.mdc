@@ -1,0 +1,38 @@
+---
+alwaysApply: true
+---
+
+# Hindi Names for Planets and Rashis
+
+Always use Hindi names (in Devanagari script) for planets and zodiac signs.
+
+## Planets (Grahas)
+- Sun → <span className="hindi">सूर्य</span>
+- Moon → <span className="hindi">चंद्र</span>
+- Mars → <span className="hindi">मंगल</span>
+- Mercury → <span className="hindi">बुध</span>
+- Jupiter → <span className="hindi">गुरु</span>
+- Venus → <span className="hindi">शुक्र</span>
+- Saturn → <span className="hindi">शनि</span>
+- Rahu → <span className="hindi">राहु</span>
+- Ketu → <span className="hindi">केतु</span>
+
+## Rashis (Zodiac Signs)
+- Aries → <span className="hindi">मेष</span>
+- Taurus → <span className="hindi">वृषभ</span>
+- Gemini → <span className="hindi">मिथुन</span>
+- Cancer → <span className="hindi">कर्क</span>
+- Leo → <span className="hindi">सिंह</span>
+- Virgo → <span className="hindi">कन्या</span>
+- Libra → <span className="hindi">तुला</span>
+- Scorpio → <span className="hindi">वृश्चिक</span>
+- Sagittarius → <span className="hindi">धनु</span>
+- Capricorn → <span className="hindi">मकर</span>
+- Aquarius → <span className="hindi">कुंभ</span>
+- Pisces → <span className="hindi">मीन</span>
+
+## Nakshatras
+Keep nakshatra names in Hindi when used in context.
+
+## Styling
+Always wrap Hindi text: <span className="hindi">हिंदी टेक्स्ट</span>

@@ -1,0 +1,37 @@
+/* Fix text selection color in dark mode */
+::selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+/* Dark mode specific selection colors */
+.dark ::selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+.dark ::-moz-selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+/* Fix active sidebar link text color in dark mode */
+.dark .nextra-sidebar-container a[aria-selected="true"] {
+  color: #ffffff 
+}
+
+.dark .nextra-sidebar-container li.active > a {
+  color: #ffffff ;
+}
+
+/* Make sure all active/selected sidebar items have white text */
+.dark nav a[data-active="true"],
+.dark nav a.active {
+  color: #ffffff ;
+}
+

@@ -54,7 +54,6 @@ const config: DocsThemeConfig = {
     prev: true,
     next: true
   },
-  breadcrumb: true,
   darkMode: true,
   primaryHue: 260,
   sidebar: {

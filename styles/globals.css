@@ -35,3 +35,13 @@
   color: #ffffff ;
 }
 
+/* Hindi text styling */
+.hindi {
+  font-weight: 500;
+  color: #667eea;
+}
+
+.dark .hindi {
+  color: #a78bfa;
+}
+

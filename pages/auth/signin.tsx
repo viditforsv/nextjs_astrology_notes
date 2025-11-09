@@ -25,13 +25,13 @@ export default function SignIn() {
       })
 
       if (result?.error) {
-        setError('Invalid username or password')
+        setError('Invalid credentials')
         setLoading(false)
       } else {
         router.push('/')
       }
     } catch (error) {
-      setError('An error occurred. Please try again.')
+      setError('An error occurred')
       setLoading(false)
     }
   }
@@ -42,105 +42,102 @@ export default function SignIn() {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-      padding: '20px'
+      background: '#fafafa',
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
     }}>
       <div style={{
         background: 'white',
-        borderRadius: '16px',
-        padding: '48px',
-        maxWidth: '400px',
+        borderRadius: '8px',
+        padding: '48px 40px',
+        maxWidth: '360px',
         width: '100%',
-        boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
+        boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+        border: '1px solid #e5e5e5'
       }}>
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <div style={{ fontSize: '48px', marginBottom: '16px' }}>📿</div>
+        <div style={{ marginBottom: '40px', textAlign: 'center' }}>
+          <div style={{ fontSize: '32px', marginBottom: '12px' }}>📿</div>
           <h1 style={{ 
-            fontSize: '28px', 
-            fontWeight: 'bold', 
-            marginBottom: '8px',
-            color: '#1a202c'
+            fontSize: '20px', 
+            fontWeight: '600', 
+            margin: '0 0 4px 0',
+            color: '#111',
+            letterSpacing: '-0.01em'
           }}>
             Vedic Astrology Notes
           </h1>
           <p style={{ 
-            color: '#718096', 
-            fontSize: '14px'
+            color: '#666', 
+            fontSize: '13px',
+            margin: 0
           }}>
-            Sign in to access the documentation
+            Sign in to continue
           </p>
         </div>
         
         <form onSubmit={handleSubmit}>
-          <div style={{ marginBottom: '20px' }}>
-            <label style={{ 
-              display: 'block', 
-              marginBottom: '8px',
-              fontSize: '14px',
-              fontWeight: '500',
-              color: '#2d3748'
-            }}>
-              Username
-            </label>
+          <div style={{ marginBottom: '16px' }}>
             <input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
               required
               style={{
                 width: '100%',
-                padding: '12px',
-                fontSize: '16px',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
+                padding: '12px 14px',
+                fontSize: '14px',
+                border: '1px solid #ddd',
+                borderRadius: '6px',
                 outline: 'none',
-                transition: 'border-color 0.2s',
-                boxSizing: 'border-box'
+                transition: 'border-color 0.15s',
+                boxSizing: 'border-box',
+                fontFamily: 'inherit'
               }}
-              onFocus={(e) => e.currentTarget.style.borderColor = '#667eea'}
-              onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = '#111'
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = '#ddd'
+              }}
             />
           </div>
 
-          <div style={{ marginBottom: '24px' }}>
-            <label style={{ 
-              display: 'block', 
-              marginBottom: '8px',
-              fontSize: '14px',
-              fontWeight: '500',
-              color: '#2d3748'
-            }}>
-              Password
-            </label>
+          <div style={{ marginBottom: '20px' }}>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
               required
               style={{
                 width: '100%',
-                padding: '12px',
-                fontSize: '16px',
-                border: '1px solid #e2e8f0',
-                borderRadius: '8px',
+                padding: '12px 14px',
+                fontSize: '14px',
+                border: '1px solid #ddd',
+                borderRadius: '6px',
                 outline: 'none',
-                transition: 'border-color 0.2s',
-                boxSizing: 'border-box'
+                transition: 'border-color 0.15s',
+                boxSizing: 'border-box',
+                fontFamily: 'inherit'
               }}
-              onFocus={(e) => e.currentTarget.style.borderColor = '#667eea'}
-              onBlur={(e) => e.currentTarget.style.borderColor = '#e2e8f0'}
+              onFocus={(e) => {
+                e.currentTarget.style.borderColor = '#111'
+              }}
+              onBlur={(e) => {
+                e.currentTarget.style.borderColor = '#ddd'
+              }}
             />
           </div>
 
           {error && (
             <div style={{
-              padding: '12px',
-              marginBottom: '20px',
-              background: '#fed7d7',
-              color: '#c53030',
-              borderRadius: '8px',
-              fontSize: '14px',
-              textAlign: 'center'
+              padding: '10px 14px',
+              marginBottom: '16px',
+              background: '#fef2f2',
+              color: '#991b1b',
+              borderRadius: '6px',
+              fontSize: '13px',
+              border: '1px solid #fecaca'
             }}>
               {error}
             </div>
@@ -151,43 +148,31 @@ export default function SignIn() {
             disabled={loading}
             style={{
               width: '100%',
-              padding: '12px 24px',
-              fontSize: '16px',
-              fontWeight: '600',
+              padding: '12px',
+              fontSize: '14px',
+              fontWeight: '500',
               color: 'white',
-              background: loading ? '#a0aec0' : '#667eea',
+              background: loading ? '#888' : '#111',
               border: 'none',
-              borderRadius: '8px',
+              borderRadius: '6px',
               cursor: loading ? 'not-allowed' : 'pointer',
-              transition: 'all 0.2s',
+              transition: 'background 0.15s',
+              fontFamily: 'inherit'
             }}
             onMouseOver={(e) => {
               if (!loading) {
-                e.currentTarget.style.background = '#5a67d8'
-                e.currentTarget.style.transform = 'translateY(-2px)'
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.4)'
+                e.currentTarget.style.background = '#000'
               }
             }}
             onMouseOut={(e) => {
               if (!loading) {
-                e.currentTarget.style.background = '#667eea'
-                e.currentTarget.style.transform = 'translateY(0)'
-                e.currentTarget.style.boxShadow = 'none'
+                e.currentTarget.style.background = '#111'
               }
             }}
           >
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? 'Signing in...' : 'Sign in'}
           </button>
         </form>
-
-        <p style={{
-          marginTop: '24px',
-          fontSize: '12px',
-          color: '#a0aec0',
-          textAlign: 'center'
-        }}>
-          Default: admin / admin123
-        </p>
       </div>
     </div>
   )

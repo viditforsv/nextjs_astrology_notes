@@ -1,8 +1,10 @@
 {
   "index": "Introduction",
   "planets": "Planets (Grahas)",
+  "rashis": "Rashis",
   "planets-in-rashis": "Planets in Rashis",
-  "signs": "Signs (Rashis)",
+  "bhavas": "Bhavas",
+  "karakas": "Karakas",
   "houses": "Houses (Bhavas)",
   "nakshatras": "Nakshatras (27 Lunar Mansions)",
   "yogas": "Yogas",

@@ -47,3 +47,12 @@ Keep nakshatra names in Hindi when used in context.
 
 ## Styling
 Always wrap Hindi text: <span className="hindi">हिंदी टेक्स्ट</span>
+
+# Knowledge and Information
+
+## External Knowledge Restriction
+
+- **No external knowledge should be added unless specifically asked**
+- Only use information provided by the user or found in the codebase
+- Do not add general knowledge, assumptions, or information from training data unless explicitly requested
+- When in doubt, ask the user before adding any external information

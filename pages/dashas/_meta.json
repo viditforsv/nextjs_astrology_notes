@@ -1,6 +1,15 @@
 {
   "index": "Overview",
   "reference": "Quick Reference",
-  "case-study-saturn": "Case Study: Saturn Analysis"
+  "case-study-saturn": "Case Study: Saturn Analysis",
+  "sun-dasha": "1. सूर्य (Sun) Dasha",
+  "moon-dasha": "2. चंद्र (Moon) Dasha",
+  "mars-dasha": "3. मंगल (Mars) Dasha",
+  "mercury-dasha": "4. बुध (Mercury) Dasha",
+  "jupiter-dasha": "5. गुरु (Jupiter) Dasha",
+  "venus-dasha": "6. शुक्र (Venus) Dasha",
+  "saturn-dasha": "7. शनि (Saturn) Dasha",
+  "rahu-dasha": "8. राहु (Rahu) Dasha",
+  "ketu-dasha": "9. केतु (Ketu) Dasha"
 }
 

@@ -29,6 +29,33 @@ Always use Hindi names (in Devanagari script) with English translations when ref
 - Aquarius = <span className="hindi">कुंभ</span> (Kumbha)
 - Pisces = <span className="hindi">मीन</span> (Meena)
 
+### Rashi Symbols (Vedic Astrology)
+
+Always use Vedic astrology symbols (emoji) along with Rashi names. Never use western astrology symbols (♈, ♉, ♊, ♋, ♌, ♍, ♎, ♏, ♐, ♑, ♒, ♓) unless explicitly mentioned.
+
+**Rashi Symbols:**
+- <span className="hindi">मेष</span> (Mesha) = 🐏
+- <span className="hindi">वृषभ</span> (Vrishabha) = 🐂
+- <span className="hindi">मिथुन</span> (Mithuna) = 👥
+- <span className="hindi">कर्क</span> (Karka) = 🦀
+- <span className="hindi">सिंह</span> (Simha) = 🦁
+- <span className="hindi">कन्या</span> (Kanya) = 👧
+- <span className="hindi">तुला</span> (Tula) = ⚖️
+- <span className="hindi">वृश्चिक</span> (Vrishchika) = 🦂
+- <span className="hindi">धनु</span> (Dhanu) = 🏹
+- <span className="hindi">मकर</span> (Makara) = 🐐
+- <span className="hindi">कुंभ</span> (Kumbha) = 🪣
+- <span className="hindi">मीन</span> (Meena) = 🐟
+
+**Usage:**
+- Always include the symbol when mentioning a Rashi: 🐏 <span className="hindi">मेष</span> (Mesha)
+- Use symbols in recommendations, tables, and documentation
+- Example: "🐏 <span className="hindi">मेष</span> (Mesha) recommendation: ..."
+
+**Western Astrology Symbols:**
+- **NEVER** use western astrology symbols (♈, ♉, ♊, ♋, ♌, ♍, ♎, ♏, ♐, ♑, ♒, ♓) unless explicitly mentioned by the user
+- This is a Vedic Astrology project - use Vedic symbols only
+
 ### Nakshatras
 Keep nakshatra names in Hindi when used in context.
 

@@ -14,7 +14,7 @@ npm install
 
 ### Authentication Setup
 
-This site uses NextAuth with simple credential-based authentication.
+This site uses NextAuth with Vercel KV for session storage and credential-based authentication.
 
 **Default Login:**
 - Username: `admin`
@@ -24,7 +24,13 @@ You can change these in `.env.local`:
 ```env
 AUTH_USERNAME=your-username
 AUTH_PASSWORD=your-password
+NEXTAUTH_SECRET=your-secret-key-here
 ```
+
+**For Vercel KV (Production):**
+Add these environment variables in Vercel:
+- `KV_REST_API_URL` - Your Vercel KV REST API URL
+- `KV_REST_API_TOKEN` - Your Vercel KV REST API token
 
 ### Development
 
@@ -80,6 +86,7 @@ npm start
 - **Next.js**: React framework for production
 - **Nextra**: Next.js static site generator for documentation
 - **NextAuth**: Authentication for Next.js
+- **Vercel KV**: Redis-based session storage
 - **TypeScript**: Type-safe JavaScript
 - **MDX**: Markdown with JSX support
 
@@ -87,11 +94,14 @@ npm start
 
 1. Push your code to GitHub
 2. Import the repository in [Vercel](https://vercel.com)
-3. Add environment variables in Vercel project settings:
-   - `NEXTAUTH_SECRET` (copy from `.env.local`)
+3. Create a Vercel KV database in your Vercel project dashboard
+4. Add environment variables in Vercel project settings:
+   - `NEXTAUTH_SECRET` (generate a random secret, e.g., `openssl rand -base64 32`)
    - `AUTH_USERNAME` (your username)
    - `AUTH_PASSWORD` (your password)
-4. Deploy!
+   - `KV_REST_API_URL` (automatically added when you create KV database)
+   - `KV_REST_API_TOKEN` (automatically added when you create KV database)
+5. Deploy!
 
 ## Customization
 

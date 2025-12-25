@@ -1,47 +1,41 @@
 import { NextRequest, NextResponse } from "next/server"
-import jwt from "jsonwebtoken"
+import { jwtVerify } from "jose"
 
-const JWT_SECRET = process.env.AUTH_SECRET || process.env.JWT_SECRET || 'your-secret-key'
+const SECRET = new TextEncoder().encode(
+  process.env.AUTH_SECRET || process.env.JWT_SECRET || 'your-secret-key'
+)
 
-export function middleware(request: NextRequest) {
+// 1. MUST be async to use 'await jwtVerify'
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   
-  // Allow access to sign-in page and API auth routes
-  if (pathname.startsWith("/auth/signin") || pathname.startsWith("/api/auth")) {
+  if (pathname === "/auth/signin" || pathname.startsWith("/api/auth")) {
     return NextResponse.next()
   }
   
-  // Check for auth token
   const token = request.cookies.get('auth-token')?.value
   
-  if (!token) {
-    const signInUrl = new URL("/auth/signin", request.url)
-    signInUrl.searchParams.set("callbackUrl", pathname)
-    return NextResponse.redirect(signInUrl)
-  }
+  if (!token) return redirectToLogin(request)
   
-  // Verify token
   try {
-    jwt.verify(token, JWT_SECRET)
+    // 2. Only use jose. It is Edge compatible.
+    await jwtVerify(token, SECRET)
     return NextResponse.next()
-  } catch {
-    // Invalid token, redirect to sign in
-    const signInUrl = new URL("/auth/signin", request.url)
-    signInUrl.searchParams.set("callbackUrl", pathname)
-    return NextResponse.redirect(signInUrl)
+  } catch (err) {
+    const response = redirectToLogin(request)
+    response.cookies.delete('auth-token')
+    return response
   }
 }
 
+function redirectToLogin(req: NextRequest) {
+  const signInUrl = new URL("/auth/signin", req.url)
+  if (req.nextUrl.pathname !== "/") {
+    signInUrl.searchParams.set("callbackUrl", req.nextUrl.pathname)
+  }
+  return NextResponse.redirect(signInUrl)
+}
+
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api/auth (authentication endpoints)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     * - public files
-     */
-    '/((?!api/auth|_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|m4a)).*)',
-  ],
+  matcher: ['/((?!api/auth|auth/signin|_next/static|_next/image|favicon.ico).*)'],
 }

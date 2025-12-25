@@ -1,15 +1,55 @@
 import { GetServerSideProps } from "next"
 import { useRouter } from "next/router"
 import { getSessionFromRequest } from "../../auth"
+import { useState } from "react"
 
 export default function SignIn() {
   const router = useRouter()
   const { error } = router.query
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [loginError, setLoginError] = useState("")
 
   const handleGoogleSignIn = () => {
     const callbackUrl = (router.query.callbackUrl as string) || "/"
     const authUrl = `/api/auth/google?callbackUrl=${encodeURIComponent(callbackUrl)}`
     window.location.href = authUrl
+  }
+
+  const handleUsernameLogin = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setLoginError("")
+
+    try {
+      const callbackUrl = (router.query.callbackUrl as string) || "/"
+      const response = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username,
+          password,
+          callbackUrl,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        setLoginError(data.error || "Invalid credentials")
+        setIsLoading(false)
+        return
+      }
+
+      // Redirect to callback URL
+      window.location.href = data.redirectUrl || "/"
+    } catch (err) {
+      setLoginError("An error occurred. Please try again.")
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -50,7 +90,7 @@ export default function SignIn() {
           </p>
         </div>
         
-        {error && (
+        {(error || loginError) && (
           <div style={{
             padding: '10px 14px',
             marginBottom: '20px',
@@ -62,9 +102,78 @@ export default function SignIn() {
           }}>
             {error === 'AccessDenied' 
               ? 'Your email is not authorized to access this application.'
-              : 'An error occurred during sign in.'}
+              : loginError || 'An error occurred during sign in.'}
           </div>
         )}
+
+        <form onSubmit={handleUsernameLogin} style={{ marginBottom: '20px' }}>
+          <div style={{ marginBottom: '16px' }}>
+            <input
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              style={{
+                width: '100%',
+                padding: '12px',
+                fontSize: '14px',
+                border: '1px solid #e5e5e5',
+                borderRadius: '6px',
+                fontFamily: 'inherit',
+                boxSizing: 'border-box'
+              }}
+            />
+          </div>
+          <div style={{ marginBottom: '16px' }}>
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              style={{
+                width: '100%',
+                padding: '12px',
+                fontSize: '14px',
+                border: '1px solid #e5e5e5',
+                borderRadius: '6px',
+                fontFamily: 'inherit',
+                boxSizing: 'border-box'
+              }}
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={isLoading}
+            style={{
+              width: '100%',
+              padding: '12px',
+              fontSize: '14px',
+              fontWeight: '500',
+              color: 'white',
+              background: isLoading ? '#666' : '#111',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: isLoading ? 'not-allowed' : 'pointer',
+              transition: 'background 0.15s',
+              fontFamily: 'inherit'
+            }}
+          >
+            {isLoading ? 'Signing in...' : 'Sign in'}
+          </button>
+        </form>
+
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          margin: '20px 0',
+          gap: '12px'
+        }}>
+          <div style={{ flex: 1, height: '1px', background: '#e5e5e5' }} />
+          <span style={{ fontSize: '12px', color: '#999' }}>OR</span>
+          <div style={{ flex: 1, height: '1px', background: '#e5e5e5' }} />
+        </div>
 
         <button
           onClick={handleGoogleSignIn}
@@ -106,15 +215,33 @@ export default function SignIn() {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = getSessionFromRequest(context.req)
-  
-  if (session) {
-    return { 
-      redirect: { 
-        destination: (context.query.callbackUrl as string) || "/",
-        permanent: false,
-      } 
+  try {
+    const session = await getSessionFromRequest(context.req)
+    
+    if (session) {
+      const callbackUrl = (context.query.callbackUrl as string) || "/"
+      // Only redirect if callbackUrl is not the signin page itself and is a valid path
+      if (callbackUrl && callbackUrl !== "/auth/signin" && callbackUrl.startsWith("/")) {
+        return { 
+          redirect: { 
+            destination: callbackUrl,
+            permanent: false,
+          } 
+        }
+      }
+      // Default to home if no valid callback
+      if (!callbackUrl || callbackUrl === "/auth/signin") {
+        return {
+          redirect: {
+            destination: "/",
+            permanent: false,
+          }
+        }
+      }
     }
+  } catch (error) {
+    // If session check fails, clear any invalid cookies and show signin page
+    // Don't redirect to prevent loops
   }
   
   return {

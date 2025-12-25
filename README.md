@@ -27,6 +27,10 @@ ALLOWED_USERS=user1@example.com,user2@example.com
 
 Get Google OAuth credentials from: https://console.cloud.google.com/apis/credentials
 
+**Important:** After creating OAuth credentials, add these Authorized redirect URIs in Google Cloud Console:
+- `http://localhost:3000/api/auth/google` (for local development)
+- `https://astrology.viditaggarwal.com/api/auth/google` (for production)
+
 Generate AUTH_SECRET with: `openssl rand -base64 32`
 
 ### Development

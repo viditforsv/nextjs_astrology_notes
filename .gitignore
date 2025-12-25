@@ -36,3 +36,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# credentials files
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!**/_meta.json
+

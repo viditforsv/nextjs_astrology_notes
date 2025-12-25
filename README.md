@@ -14,23 +14,18 @@ npm install
 
 ### Authentication Setup
 
-This site uses NextAuth with Vercel KV for session storage and credential-based authentication.
+This site uses NextAuth v5 with Google OAuth authentication.
 
-**Default Login:**
-- Username: `admin`
-- Password: `admin123`
-
-You can change these in `.env.local`:
+**Environment Variables:**
+Create a `.env.local` file with:
 ```env
-AUTH_USERNAME=your-username
-AUTH_PASSWORD=your-password
-NEXTAUTH_SECRET=your-secret-key-here
+AUTH_SECRET=your-secret-key-here-generate-with-openssl-rand-base64-32
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+ALLOWED_USERS=user1@example.com,user2@example.com
 ```
 
-**For Vercel KV (Production):**
-Add these environment variables in Vercel:
-- `KV_REST_API_URL` - Your Vercel KV REST API URL
-- `KV_REST_API_TOKEN` - Your Vercel KV REST API token
+Get Google OAuth credentials from: https://console.cloud.google.com/apis/credentials
 
 ### Development
 
@@ -85,8 +80,7 @@ npm start
 
 - **Next.js**: React framework for production
 - **Nextra**: Next.js static site generator for documentation
-- **NextAuth**: Authentication for Next.js
-- **Vercel KV**: Redis-based session storage
+- **NextAuth v5**: Authentication for Next.js with Google OAuth
 - **TypeScript**: Type-safe JavaScript
 - **MDX**: Markdown with JSX support
 
@@ -94,13 +88,11 @@ npm start
 
 1. Push your code to GitHub
 2. Import the repository in [Vercel](https://vercel.com)
-3. Create a Vercel KV database in your Vercel project dashboard
-4. Add environment variables in Vercel project settings:
-   - `NEXTAUTH_SECRET` (generate a random secret, e.g., `openssl rand -base64 32`)
-   - `AUTH_USERNAME` (your username)
-   - `AUTH_PASSWORD` (your password)
-   - `KV_REST_API_URL` (automatically added when you create KV database)
-   - `KV_REST_API_TOKEN` (automatically added when you create KV database)
+3. Add environment variables in Vercel project settings:
+   - `AUTH_SECRET` (generate a random secret, e.g., `openssl rand -base64 32`)
+   - `GOOGLE_CLIENT_ID` (from Google Cloud Console)
+   - `GOOGLE_CLIENT_SECRET` (from Google Cloud Console)
+   - `ALLOWED_USERS` (comma-separated list of authorized email addresses)
 5. Deploy!
 
 ## Customization

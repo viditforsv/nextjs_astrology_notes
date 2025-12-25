@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import { useSession, signOut } from 'next-auth/react'
 
 const NavbarExtraContent = () => {
-  const { data: session } = useSession()
+  const [session, setSession] = useState<{ email: string; name?: string } | null>(null)
+
+  useEffect(() => {
+    // Check if user is authenticated by checking for cookie
+    const checkAuth = async () => {
+      try {
+        const response = await fetch('/api/auth/session')
+        if (response.ok) {
+          const data = await response.json()
+          setSession(data.user)
+        }
+      } catch {
+        setSession(null)
+      }
+    }
+    checkAuth()
+  }, [])
+
+  const handleSignOut = async () => {
+    await fetch('/api/auth/signout', { method: 'POST' })
+    window.location.href = '/auth/signin'
+  }
   
   if (session) {
     return (
       <button
-        onClick={() => signOut()}
+        onClick={handleSignOut}
         style={{
           padding: '6px 12px',
           fontSize: '14px',
@@ -65,4 +85,3 @@ const config: DocsThemeConfig = {
 }
 
 export default config
-

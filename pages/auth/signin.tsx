@@ -1,5 +1,6 @@
 import { GetServerSideProps } from "next"
 import { useRouter } from "next/router"
+import { getSessionFromRequest } from "../../auth"
 
 export default function SignIn() {
   const router = useRouter()
@@ -7,7 +8,8 @@ export default function SignIn() {
 
   const handleGoogleSignIn = () => {
     const callbackUrl = (router.query.callbackUrl as string) || "/"
-    window.location.href = `/api/auth/signin/google?callbackUrl=${encodeURIComponent(callbackUrl)}`
+    const authUrl = `/api/auth/google?callbackUrl=${encodeURIComponent(callbackUrl)}`
+    window.location.href = authUrl
   }
 
   return (
@@ -104,10 +106,9 @@ export default function SignIn() {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  // Check if user is already authenticated by checking for session cookie
-  const sessionToken = context.req.cookies['authjs.session-token'] || context.req.cookies['__Secure-authjs.session-token']
+  const session = getSessionFromRequest(context.req)
   
-  if (sessionToken) {
+  if (session) {
     return { 
       redirect: { 
         destination: (context.query.callbackUrl as string) || "/",
@@ -120,4 +121,3 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {},
   }
 }
-

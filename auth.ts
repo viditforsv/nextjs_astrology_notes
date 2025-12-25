@@ -1,41 +1,77 @@
-import NextAuth from "next-auth"
-import Google from "next-auth/providers/google"
-import type { NextAuthConfig } from "next-auth"
+import { NextRequest, NextResponse } from 'next/server'
+import { IncomingMessage, ServerResponse } from 'http'
+import jwt from 'jsonwebtoken'
 
+export interface Session {
+  email: string
+  name?: string
+  picture?: string
+}
+
+const JWT_SECRET = process.env.AUTH_SECRET || process.env.JWT_SECRET || 'your-secret-key'
 const allowedUsers = process.env.ALLOWED_USERS?.split(",").map(email => email.trim()) || []
 
-export const config = {
-  providers: [
-    Google({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    }),
-  ],
-  callbacks: {
-    async signIn({ user }) {
-      if (!user.email) {
-        return false
-      }
-      
-      // Check if user email is in the allowed list
-      if (!allowedUsers.includes(user.email)) {
-        return false
-      }
-      
-      return true
-    },
-    authorized({ auth }) {
-      return !!auth
-    },
-  },
-  pages: {
-    signIn: "/auth/signin",
-  },
-  session: {
-    strategy: "jwt",
-  },
-  secret: process.env.AUTH_SECRET,
-} satisfies NextAuthConfig
+export function isEmailAllowed(email: string): boolean {
+  return allowedUsers.length === 0 || allowedUsers.includes(email)
+}
 
-export const { handlers, auth, signIn, signOut } = NextAuth(config)
+// For App Router (Server Components)
+export async function getSession(): Promise<Session | null> {
+  try {
+    const { cookies } = await import('next/headers')
+    const cookieStore = cookies()
+    const token = cookieStore.get('auth-token')?.value
+    
+    if (!token) {
+      return null
+    }
+    
+    const decoded = jwt.verify(token, JWT_SECRET) as Session
+    return decoded
+  } catch {
+    return null
+  }
+}
 
+// For Pages Router (getServerSideProps)
+export function getSessionFromRequest(req: IncomingMessage): Session | null {
+  try {
+    const cookies = req.headers.cookie?.split(';').reduce((acc, cookie) => {
+      const [key, value] = cookie.trim().split('=')
+      acc[key] = value
+      return acc
+    }, {} as Record<string, string>)
+    
+    const token = cookies?.['auth-token']
+    
+    if (!token) {
+      return null
+    }
+    
+    const decoded = jwt.verify(token, JWT_SECRET) as Session
+    return decoded
+  } catch {
+    return null
+  }
+}
+
+export function createSession(user: { email: string; name?: string; picture?: string }): string {
+  if (!isEmailAllowed(user.email)) {
+    throw new Error('Email not authorized')
+  }
+  
+  const session: Session = {
+    email: user.email,
+    name: user.name,
+    picture: user.picture,
+  }
+  
+  return jwt.sign(session, JWT_SECRET, { expiresIn: '30d' })
+}
+
+// For App Router
+export async function deleteSession(): Promise<void> {
+  const { cookies } = await import('next/headers')
+  const cookieStore = cookies()
+  cookieStore.delete('auth-token')
+}

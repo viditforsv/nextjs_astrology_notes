@@ -14,7 +14,7 @@ npm install
 
 ### Authentication Setup
 
-This site uses NextAuth v5 with Google OAuth authentication.
+This site uses Google OAuth authentication with JWT tokens.
 
 **Environment Variables:**
 Create a `.env.local` file with:
@@ -26,6 +26,8 @@ ALLOWED_USERS=user1@example.com,user2@example.com
 ```
 
 Get Google OAuth credentials from: https://console.cloud.google.com/apis/credentials
+
+Generate AUTH_SECRET with: `openssl rand -base64 32`
 
 ### Development
 
@@ -80,7 +82,7 @@ npm start
 
 - **Next.js**: React framework for production
 - **Nextra**: Next.js static site generator for documentation
-- **NextAuth v5**: Authentication for Next.js with Google OAuth
+- **Google OAuth**: Direct Google authentication with JWT tokens
 - **TypeScript**: Type-safe JavaScript
 - **MDX**: Markdown with JSX support
 

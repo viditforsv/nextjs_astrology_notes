@@ -1,0 +1,32 @@
+
+
+### 1st House
+- Vision and intellect of a leader
+- Because of self, overshadow others
+- Can be autocratic and egositic
+- Drishti karaka, have the light. Can be visionary. 
+- Wisdom, high aatmabal, positive.
+- Fire element, short tempered, angry
+- Kaan ka kaccha, doosro ki baat pe vishwaas kar leta hai. 
+- Good placement for politicians, creative, leadership roles. 
+	- Power to see things and visualise things
+	- Fixed and defined vision (Rahu have undefined vision)
+- Ambitious and high achievers
+- Uccha Surya in kal purush chart
+- Can be good for marriage. Can be bad for the person. 
+- Migrane de sakte hai, issues with eyes. 
+- Drishti on 7H, brighten the 7H
+- If in the Rashi of mars or friend, then built like a king. 
+- Lalahaat would be broad, would like to keep mustache, likes to go to gym
+- Like a lion or king
+- In conjuctions or aspects thoda change ho jaega
+- Sun + Jupiter combination
+	- Weaker sun
+	- Anger would be less
+- Good placement for sun.
+- Less challenges in life. 
+- Kendra main surya hain. 
+- Sun in lagna - Rudra will come to save. Shiva will help. 
+	- Help will come from govt, kings, elders, people with elder age, officials
+- Remedy - Om Namah Shivaay
+	- sun will be more powerful

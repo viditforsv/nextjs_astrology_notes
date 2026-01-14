@@ -1,0 +1,36 @@
+- Ketu is headless
+- Ketu signifies mistakes
+	- Where ketu is sitting, person is prone to make mistakes in those houses
+	- Decision making is taken by ketu
+- Ketu is like a tail
+- Relations
+	- na choda jaega na pakda jaega
+- Ketu is ego
+- Chupa hua, hai par dikhta nahi hai
+- Ketu is already dead
+- Ketu with Jupiter - very spiritual
+- Vairagya from his place of sitting
+- Har graha ke 10 number hai - context nahi pata abhi. 
+- Smaller machines like laptops, softwares
+- Rahu is bigger machines like cranes
+- Rahu - Bhog
+- Ketu - yoga 
+- 4H is Gati - "Direction of the soul" #bhava 
+	- Planet is 4H maa ka roop 
+	- Mother is dhumavati or chamunda  for ketu
+- Ketu + mars - dangerous
+- Ketu + mercury - Duality, multiple hidden things
+- Ketu + Venus - Vairagya in relationships
+	- Ketu will dominate
+-  7H is maran karaka for mars
+- Professions of Ketu
+	- Mathematics
+	- Research
+	- Spirituality
+	- Software
+	- Jyotish
+	- Occult
+	- Language translator
+	- Mining
+	- Chote chote jobs
+- 12H is back of the head, where intellect stops and sub conscious takes over. 

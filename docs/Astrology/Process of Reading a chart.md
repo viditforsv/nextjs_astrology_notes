@@ -1,0 +1,6 @@
+- Kis house main kaunsa graha baitha hai
+	- Accha hai ki bura hai?
+- Lord of the house kaisa hai? 
+- Also include the aspects
+- Then karaka of the house
+- 

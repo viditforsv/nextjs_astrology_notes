@@ -90,3 +90,56 @@
   color: #a78bfa;
 }
 
+/* Collapsible meanings component */
+.collapsible-meanings-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.collapsible-meanings-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.collapsible-meanings-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.collapsible-meanings-btn.is-open {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.collapsible-meanings-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.dark .collapsible-meanings-btn {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .collapsible-meanings-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark .collapsible-meanings-btn.is-open {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .collapsible-meanings-content {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+

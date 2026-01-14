@@ -1,0 +1,5 @@
+- Karaka is Mangal and Mercury by KP Chart
+- 3H is not good house because Ma and Me ka natural energy and they have conflicting nature. 
+- Me - Digbal in lagn
+- Ma - Swarashi in Lagn
+- 3L will go wherever, there will be effort, 8th from 8th. Mrityu karaka

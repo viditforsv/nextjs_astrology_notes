@@ -1,0 +1,16 @@
+### 5th House
+- Wealth from 5H activities
+- 2H and 5H related then govt job dekhte hain
+- 5H is wealth of public
+- Malefic
+	- Desires to put into satta etc but will take the money
+- 2L is 4th from itself then easy money
+- if 2L or 11L make a relation with 5L or 9L then the person will be wealthy. 
+	- Lakshmi Kripa
+- eg: Ve
+	- Good consultant
+- eg: Ma
+	- Engineer
+- Drishti
+	- eg: Scorpio, Ju(2L) in 5H will have drishti on 11H. Good money. Jupiter will increase income
+	- Jupiter, increasing income by Drishti, increasing saving in 2H by ownership by 5H(Purva Punya)

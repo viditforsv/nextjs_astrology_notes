@@ -1,0 +1,15 @@
+- Rahu ketu jis rashi main hote hain ya jis planet ke saath hote hain waisa behave karte hain
+- Rahu jahan baithega wahan se shrap aata hai
+- Mangal ki Rashi main Rahu is very cursed. Rahu and mars are enemies
+- Rahu is karaka for diplomacy
+- Rahu maha dasha antar dasha main astrology ki padai hoti hai -- meri hai bhai!!! 
+- Stock market main buddhi ka kaam nahi hai. It is ruled by mercury and moon
+- Vrishchik ka Rahu is bad. Because Mars and Rahu are enemies
+- 4H main har graha devi swaroop hai
+- Rahu ki devi durga hain
+- photography is rahu
+- Detective, CBI, Suspense related jobs
+- Rahu se zyada strong planet moon or lagnesh ho to rahu dushkarm main nahi jaega
+- Longitivity is seen by moon and Shani
+- Chandra ki rashi main Rahu accha hota hai
+- Internet and foreign is rahu 

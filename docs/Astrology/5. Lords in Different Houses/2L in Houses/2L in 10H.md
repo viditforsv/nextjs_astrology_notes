@@ -1,0 +1,16 @@
+### 10th House
+- Money coming from karma
+	- Self earned money
+	- Learned, wealthy, honest means
+	- Ve and Ju in 10H makes karma pure
+	- Service, Commerce, Trade, Religious and through lectures
+- Good position
+- Speech ki wajah se respect and fame
+- Can be banker, Lustful
+- Ju is deblitated in 10H
+	- Jupiter is value system
+	- Problems in character related to females
+- Ve is happy because it is in 2nd House
+- 10H is 4th from 7th, happiness of 7th
+	- Spend money towards multiple wives/females(because jupiter expand karta hai)
+- For money matters it is a good place

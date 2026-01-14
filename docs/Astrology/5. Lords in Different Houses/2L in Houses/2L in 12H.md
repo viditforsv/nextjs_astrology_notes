@@ -1,0 +1,13 @@
+### 12th House
+- Benefic
+	- Earn from foreign
+	- Money in investment - money grows
+	- Earn from religious activities - ashram, Ju and Ve in 12th H
+	- Moksha Karaka
+- Malefic
+	- Money going to losses
+	- Nirdhan yoga
+	- Can be dependent on others
+	- Lose money because of speech. 
+- 12H is 8th from 5H, so not good for 1st son. 
+- Donation in Ashram

@@ -1,0 +1,119 @@
+- Somethings are not permanent
+- Somethings are permanent
+	- like once you become a CA or engineer
+- Drishti is like iccha
+	- it may or may not be there - temporary
+- eg: Mercury
+	- Placement - I know this
+	- Drishti - I want to learn this
+	- eg: Me in 3H
+		- am good in communication, writing coding etc
+	- aspect on 3H
+		- I want to be good in communication, writing coding etc
+- eg: Venus
+	- Drishti - Cleanliness , non compromising behaviour
+- eg Jupiter
+	- 5th drishti - growth because of purva punya as you progress in life with age
+	- eg: 5th drishti on 11th house - salary will increase with time, also income will never decrease
+	- you have to work for the income, work hard towards it. because nature of jupiter is to work hard and give exam then earn it. 
+	- Very important drishti
+	- less effort
+	- not necessarily materialistic gain
+	- when ju is looking at 1H, as your age increases weight increases because jupiter is fat
+	- 9H - 9th Drishti 
+		- fortune increases
+		- if you do that then fortune increases
+	- eg: Ju in 3H 
+		- then 5th drishti on 7th house
+			- such a lade treats her husband like a child
+	- Ju in 11H 
+		- 9th drishti on 7th H
+			- lady treats her husband like father happily doing that
+	- Ju in 9H 
+		- 9A on 5H - treat child as father of self
+		- Career will shoot because bhagya will increase after birth of 1st child, by teaching, by mantra
+	- 7th Drishti
+		- Partnership se growth hogi
+		- opposite gender ka partner
+		- eg: Ju in 11H, 7A on 5H, such a person will treat child like a partner
+- Mars - Fire in Drishti
+	- 4A
+		- Sukh ki haani
+	- 7A
+	- 8A
+		- Kashtha, obstacle, suspense bad jaega, sudden
+		- Agression, parakram karke bahar nikalna padega wahan se
+	- eg: Mars in 9H
+		- 7A on 3H- 
+			- Aggressive initiative - Good quality
+			- Younger siblings ka no sukh
+			- Would be aggressive while writing and in communication
+		- 4A on 12H
+			- 12H related activities main sukh ki haani
+			- Native may like to spend a lot or if they spend on something not able to enjoy it. 
+		- 8A on 4H
+			- Native does not want to stay in house, would like to leave the country
+			- Native want to go out
+- Saturn - poison in Drishti, struggle, slowness, dukha. karm hai to karna hoga
+	- 3A
+		- Struggle, and will have to do parakram
+		- eg: Sa in 6H, 3A on 8H
+			- Will destroy kastha
+			- problem at in laws
+	- 7A
+		- straight death like scenario, max pressure, max mehnat, delay and disappointment
+		- Delay, Extremely discipline, then reward
+		- eg: Sa in 6H , 7A on 12H
+			- Kanjoos, would avoid foreign lands
+	- 10A
+		- karma karna padega and life long chalega
+		- poore jeevan wo karna padega
+		- No recognition in that house
+		- eg: Sa in 6H, 10A on 3H
+			- struggles khatam
+- eg: Sa in 4H
+	- 3A on 6H
+		- Loan lega to bahut problem hogi, 3H is parakram, struggling in repaying the loan. karma hai lena hi hoga. 
+	- 7A on 10H
+	- 10A on 1H
+		- Stop you to perform, drag karna pad raha hai, health support nahi kar raha
+- Sa in 7H, 7A on 1H - can lead to depression
+- Sa in 10H
+	- 3A on 12H
+		- Kanjoos
+	- 7A on 4H
+		- no happiness at home, mother se dukh
+	- 10A on 7H
+		- spouse ke prati karma pending, no recognition from spouse. 
+		- Shaadi tootega nahi kyunki karma khatam todi karna hai
+- eg: Sa A on 7H
+	- dryness in relationships, sex life, partnerships
+	- spouse will always find faults in you
+	- 
+Rahu
+- 5A
+	- Purva paap ki wajah se problems
+	- Native wont be able to leave because it is desire
+	- eg: Ra 5A on 2H - Desire to make money but purva paap there. Hallucinated for money, eat things which should not eat. Interested in smoking and alcohol. 
+- 7A
+- 9A
+	- Dur-Bhagya in that house
+	- Galat guru in that house - misleading, you will go there because of desire
+		- Be very careful to select that teacher in those domains. Dont finalise them yourself. Take help
+
+# Other concepts
+- Even if malefic planet looks at his own house dont harm that house a lot
+	- Shani as exception will harm his own house. Saturn have no choice. But he will try to reduce the damage in his own house. 
+	- Mars - wont harm 
+- Shubh graha aspect on its house makes it very strong
+- 6H sa is excellent shani
+- Multiple Aspects - Negative reducing - positive reducing. Cancelling each other
+- Intention and attention jahan hota hai wo grow karta hai
+- Jahan jupiter ki drishti hai wahan pe attention hoti to wahan ki growth happiness laegi 
+- Jahan shani drishti hai
+	- acceptance laani hai 
+	- surrender
+	- Dispassion
+- Takat kahan daalni hai? Jahan guru ki drishti hai
+- Ra ki drishti is creating karma for the next birth
+	- can be transformed

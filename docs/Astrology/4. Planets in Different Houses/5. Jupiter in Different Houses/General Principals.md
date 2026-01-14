@@ -1,0 +1,19 @@
+- Jeeva - 2nd name for jupiter
+- Shiva is the first guru
+- karaka of
+	- Dhi shakti
+		- Buddhi, Shuddhi, Vriddhi
+	- Meetha
+	- Law - Social Norms
+- Ayu dekhne ke liye Moon and Saturn are important #age 
+- 7H 
+	- Maraka ghat
+	- Pad Prapti
+	- Meditation
+	- Marriage and partnerships
+- Mercury can discuss, can be a diplomat but guru will have solutions
+- if 9th Drishti on 7th house, then spouse will treat like father. 
+- Bachpan main jatak ke chart main parents ke chart kaam karte hain agar wo apne parents ke saath hai to. 
+- Jupiter ki maha dasha main dhan ki shuddhi bahut zaroori hai. Daan karna bahut zaroori hai
+- Jupiter + shani gives vairagya - sanyas yoga
+- 

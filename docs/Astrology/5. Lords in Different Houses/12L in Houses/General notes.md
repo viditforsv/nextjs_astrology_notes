@@ -1,0 +1,1 @@
+Energy of Ju, Ve and Sa

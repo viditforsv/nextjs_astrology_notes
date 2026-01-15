@@ -143,3 +143,118 @@
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* Collapsible TOC (Table of Contents) */
+/* Target Nextra TOC container */
+.nextra-toc,
+[class*="nextra-toc"] {
+  position: relative;
+}
+
+/* TOC items that have nested children */
+.nextra-toc li:has(ul),
+[class*="nextra-toc"] li:has(ul) {
+  position: relative;
+}
+
+/* Add chevron icon to TOC items with children */
+.nextra-toc li:has(ul) > a::before,
+[class*="nextra-toc"] li:has(ul) > a::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  color: currentColor;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+
+/* Rotate chevron when expanded (using data attribute) */
+.nextra-toc li[data-expanded="true"] > a::before,
+[class*="nextra-toc"] li[data-expanded="true"] > a::before {
+  transform: rotate(90deg);
+}
+
+/* Make TOC items with children look clickable */
+.nextra-toc li:has(ul) > a,
+[class*="nextra-toc"] li:has(ul) > a {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.nextra-toc li:has(ul) > a:hover,
+[class*="nextra-toc"] li:has(ul) > a:hover {
+  opacity: 0.8;
+}
+
+/* Hide nested items when collapsed */
+.nextra-toc li[data-expanded="false"] > ul,
+[class*="nextra-toc"] li[data-expanded="false"] > ul {
+  display: none;
+}
+
+/* Show nested items when expanded */
+.nextra-toc li[data-expanded="true"] > ul,
+[class*="nextra-toc"] li[data-expanded="true"] > ul {
+  display: block;
+}
+
+/* Default state - collapsed by default */
+.nextra-toc li:has(ul):not([data-expanded]),
+[class*="nextra-toc"] li:has(ul):not([data-expanded]) {
+  --toc-expanded: false;
+}
+
+/* Style for nested TOC items */
+.nextra-toc li ul,
+[class*="nextra-toc"] li ul {
+  margin-left: 12px;
+  margin-top: 4px;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* Alternative approach: Target by heading level in TOC */
+/* H2 headings in TOC that have H3 children */
+.nextra-toc a[href^="#poorva-peethika"],
+.nextra-toc a[href^="#stotram"],
+.nextra-toc a[href^="#phalasruthi"],
+.nextra-toc a[href^="#dhyanam"] {
+  position: relative;
+  cursor: pointer;
+}
+
+.nextra-toc a[href^="#poorva-peethika"]::before,
+.nextra-toc a[href^="#stotram"]::before,
+.nextra-toc a[href^="#phalasruthi"]::before,
+.nextra-toc a[href^="#dhyanam"]::before {
+  content: '▶';
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 10px;
+  transition: transform 0.2s ease;
+  color: currentColor;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+
+/* Fallback: Target any TOC link that's followed by a nested list */
+.nextra-toc li > a + ul {
+  margin-left: 16px;
+  margin-top: 4px;
+}
+
+/* Make section headers in TOC collapsible */
+.nextra-toc li:has(> ul > li) > a {
+  font-weight: 600;
+}
+
+/* Ensure nested lists are hidden by default until JS sets data-expanded */
+.nextra-toc li > ul {
+  display: none;
+}
+
+.nextra-toc li[data-expanded="true"] > ul {
+  display: block;
+}

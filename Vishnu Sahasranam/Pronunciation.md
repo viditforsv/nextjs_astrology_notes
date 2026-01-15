@@ -142,7 +142,9 @@
 # Stotram
 
 ## Shlok 31
+
 ![[Pasted image 20251222193813.png]]
+
 ![[Shlok 35.m4a]]
 ## Shlok 32
 

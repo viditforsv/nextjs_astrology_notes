@@ -1,0 +1,11 @@
+- Lord of war in Marriage and partnerships
+- Many illicit relations
+- 3H is house of sex
+- Me and Mars ka energy - both believe in illicit relationships
+- 7H is also foreign
+	- Lives in foreign
+- Govt service is 5H or 3H
+	- govt jobs or govt related work
+- 7H is vriddhi ka sthan
+- Apne prayatn se 0 se hero. In the evening. 
+- Parental land chodna padta hai. 

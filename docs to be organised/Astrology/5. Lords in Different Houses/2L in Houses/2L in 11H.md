@@ -1,0 +1,13 @@
+### 11th House
+- Benefic
+	- Earn from elder brothers, friends 11H things, 
+- Malefic
+	- 11H people will take money
+	- Friends will go away
+- Super Dhan yoga
+- Deligent, honorable
+- Desire fulfilment from money. 
+- Earn easily
+- Make friends because of speech
+- 4 - 10 relationship, 2L 10th to itself, 
+- 7th from 5th, maraka sthan of santan. 

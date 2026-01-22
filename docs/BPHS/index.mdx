@@ -1,0 +1,468 @@
+---
+title: Overview of BPHS
+sidebar_position: 1
+---
+
+import { useState } from 'react';
+
+# BPHS (Brihat Parashara Hora Shastra)
+
+Notes and references from Brihat Parashara Hora Shastra.
+
+## All 99 Chapters
+
+{(() => {
+  const [searchTerm, setSearchTerm] = useState('');
+  
+  const filterChapter = (chapterNum) => {
+    if (!searchTerm) return true;
+    const num = parseInt(searchTerm);
+    return !isNaN(num) && chapterNum === num;
+  };
+  
+  return (
+    <>
+      <div style={{
+        marginBottom: '1.5rem',
+        maxWidth: '400px'
+      }}>
+        <input
+          type="number"
+          placeholder="Search by chapter number (1-99)"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          min="1"
+          max="99"
+          style={{
+            width: '100%',
+            padding: '0.75rem',
+            fontSize: '1rem',
+            border: '1px solid var(--ifm-color-emphasis-300)',
+            borderRadius: '8px',
+            backgroundColor: 'var(--ifm-background-surface-color)',
+            color: 'var(--ifm-color-content)'
+          }}
+        />
+        {searchTerm && (
+          <button
+            onClick={() => setSearchTerm('')}
+            style={{
+              marginTop: '0.5rem',
+              padding: '0.5rem 1rem',
+              fontSize: '0.875rem',
+              border: '1px solid var(--ifm-color-emphasis-300)',
+              borderRadius: '6px',
+              backgroundColor: 'var(--ifm-color-emphasis-100)',
+              color: 'var(--ifm-color-content)',
+              cursor: 'pointer'
+            }}
+          >
+            Clear
+          </button>
+        )}
+      </div>
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+  gap: '1.5rem',
+  marginTop: '2rem',
+  marginBottom: '2rem'
+}}>
+
+{filterChapter(1) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(१) Chapter 1</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">सृष्टिक्रमकथनाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on the Narration of the Order of Creation
+  </p>
+  <div style={{ marginTop: '0.75rem', fontSize: '0.85rem', color: 'var(--ifm-color-emphasis-600)' }}>
+    <div>• <span className="hindi">ग्रन्थावतरण</span> (Introduction)</div>
+    <div>• <span className="hindi">सृष्टिक्रम</span> (Order of Creation)</div>
+  </div>
+</div>}
+
+{filterChapter(2) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(२) Chapter 2</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">अवतारकथनाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on the Narration of Incarnations
+  </p>
+</div>}
+
+{filterChapter(3) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(३) Chapter 3</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">ग्रहगुणस्वरूपाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on the Nature and Qualities of Planets
+  </p>
+</div>}
+
+{filterChapter(4) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(४) Chapter 4</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">राशिस्वरूपाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on the Nature of Signs
+  </p>
+</div>}
+
+{filterChapter(5) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(५) Chapter 5</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">ज्ञानाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Knowledge
+  </p>
+</div>}
+
+{filterChapter(6) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(६) Chapter 6</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">वर्णददशाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Varnada Dasha
+  </p>
+</div>}
+
+{filterChapter(7) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(७) Chapter 7</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">षोडशर्गाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Sixteen Divisions
+  </p>
+</div>}
+
+{filterChapter(8) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(८) Chapter 8</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">वर्गविवेकाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Varga Analysis
+  </p>
+</div>}
+
+{filterChapter(9) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(९) Chapter 9</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <span className="hindi">राशिदृष्टिकथनाध्यायः</span>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Sign Aspects
+  </p>
+</div>}
+
+{filterChapter(10) && <div style={{
+  border: '1px solid var(--ifm-color-emphasis-300)',
+  borderRadius: '8px',
+  padding: '1.25rem',
+  backgroundColor: 'var(--ifm-background-surface-color)',
+  transition: 'all 0.2s ease',
+  cursor: 'pointer'
+}} onMouseEnter={(e) => {
+  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+  e.currentTarget.style.transform = 'translateY(-2px)';
+}} onMouseLeave={(e) => {
+  e.currentTarget.style.boxShadow = 'none';
+  e.currentTarget.style.transform = 'translateY(0)';
+}}>
+  <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>(१०) Chapter 10</div>
+  <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+    <a href="/BPHS/aristadhyayah" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <span className="hindi">अरिष्टाध्यायः</span>
+    </a>
+  </h3>
+  <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+    Chapter on Misfortune
+  </p>
+</div>}
+
+{(() => {
+  const devanagariDigits = ['', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+  const devanagariTens = ['', '', '२', '३', '४', '५', '६', '७', '८', '९'];
+  
+  const toDevanagari = (num) => {
+    if (num < 10) return devanagariDigits[num];
+    if (num === 10) return '१०';
+    if (num < 20) return '१' + devanagariDigits[num % 10];
+    if (num < 100) {
+      const tens = Math.floor(num / 10);
+      const ones = num % 10;
+      return devanagariTens[tens] + '०' + (ones > 0 ? devanagariDigits[ones] : '');
+    }
+    return '९९';
+  };
+  
+  const chapterNames = {
+    11: { hindi: 'अरिष्टभङ्गाध्यायः', english: 'Chapter on Cancellation of Misfortune' },
+    12: { hindi: 'भावविवेकाध्यायः', english: 'Chapter on Bhava Analysis' },
+    13: { hindi: 'तनुभावफलाध्यायः', english: 'Chapter on Results of First House' },
+    14: { hindi: 'धनभावफलाध्यायः', english: 'Chapter on Results of Second House' },
+    15: { hindi: 'सहजभावफलाध्यायः', english: 'Chapter on Results of Third House' },
+    16: { hindi: 'सुखभावफलाध्यायः', english: 'Chapter on Results of Fourth House' },
+    17: { hindi: 'पञ्चमभावफलाध्यायः', english: 'Chapter on Results of Fifth House' },
+    18: { hindi: 'षष्ठभावफलाध्यायः', english: 'Chapter on Results of Sixth House' },
+    19: { hindi: 'जायाभावफलाध्यायः', english: 'Chapter on Results of Seventh House' },
+    20: { hindi: 'आयुर्भावफलाध्यायः', english: 'Chapter on Results of Eighth House' },
+    21: { hindi: 'भाग्यभावफलाध्यायः', english: 'Chapter on Results of Ninth House' },
+    22: { hindi: 'कर्मभावफलाध्यायः', english: 'Chapter on Results of Tenth House' },
+    23: { hindi: 'लाभभावफलाध्यायः', english: 'Chapter on Results of Eleventh House' },
+    24: { hindi: 'व्ययभावफलाध्यायः', english: 'Chapter on Results of Twelfth House' },
+    25: { hindi: 'भावेशफलाध्यायः', english: 'Chapter on Results of House Lords' },
+    26: { hindi: 'अप्रकाशग्रहफलाध्यायः', english: 'Chapter on Results of Invisible Planets' },
+    27: { hindi: 'ग्रहस्फुटदृष्टिकथनाध्यायः', english: 'Chapter on Description of Planetary Aspects' },
+    28: { hindi: 'स्पष्टबलाध्यायः', english: 'Chapter on Shadbala (Sixfold Strength)' },
+    29: { hindi: 'इष्टकष्टाध्यायः', english: 'Chapter on Ishta and Kashta' },
+    30: { hindi: 'पदाध्यायः', english: 'Chapter on Padas' },
+    31: { hindi: 'उपपदाध्यायः', english: 'Chapter on Upapadas' },
+    32: { hindi: 'अर्गलाध्यायः', english: 'Chapter on Argala' },
+    33: { hindi: 'कारकाध्यायः', english: 'Chapter on Karakas' },
+    34: { hindi: 'कारकांशफलाध्यायः', english: 'Chapter on Results of Karakamsa' },
+    35: { hindi: 'योगकारकाध्यायः', english: 'Chapter on Yogakarakas' },
+    36: { hindi: 'नाभसयोगाध्यायः', english: 'Chapter on Nabhasa Yogas' },
+    37: { hindi: 'विविधयोगाध्यायः', english: 'Chapter on Various Yogas' },
+    38: { hindi: 'चन्द्रयोगाध्यायः', english: 'Chapter on Moon Yogas' },
+    39: { hindi: 'सूर्ययोगाध्यायः', english: 'Chapter on Sun Yogas' },
+    40: { hindi: 'राजयोगाध्यायः', english: 'Chapter on Raja Yogas' },
+    41: { hindi: 'राजसम्बन्धयोगाध्यायः', english: 'Chapter on Raja Sambandha Yogas' },
+    42: { hindi: 'विशेषधनयोगाध्यायः', english: 'Chapter on Special Wealth Yogas' },
+    43: { hindi: 'दारिद्र्ययोगाध्यायः', english: 'Chapter on Poverty Yogas' },
+    44: { hindi: 'आयुर्दायाध्यायः', english: 'Chapter on Longevity Calculation' },
+    45: { hindi: 'मारकभेदाध्यायः', english: 'Chapter on Distinctions of Maraka' },
+    46: { hindi: 'ग्रहावस्थाध्यायः', english: 'Chapter on Planetary States' },
+    47: { hindi: 'दशाध्यायः', english: 'Chapter on Dashas' },
+    48: { hindi: 'कालचक्रदशाध्यायः', english: 'Chapter on Kalachakra Dasha' },
+    49: { hindi: 'दशाफलाध्यायः', english: 'Chapter on Results of Dashas' },
+    50: { hindi: 'विशेषनक्षत्रदशाफलाध्यायः', english: 'Chapter on Results of Special Nakshatra Dashas' },
+    51: { hindi: 'कालचक्रदशाफलाध्यायः', english: 'Chapter on Results of Kala Chakra Dasha' },
+    52: { hindi: 'चरादिदशाफलाध्यायः', english: 'Chapter on Results of Charadi Dashas' },
+    53: { hindi: 'अन्तर्दशाध्यायः', english: 'Chapter on Antardashas' },
+    54: { hindi: 'सूर्यदशान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Antardashas in Sun Dasha' },
+    55: { hindi: 'चन्द्रान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Antardashas in Moon Dasha' },
+    56: { hindi: 'भौमदशान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Mars Dasha and Antardasha' },
+    57: { hindi: 'राह्वन्तर्दशाफलाध्यायः', english: 'Chapter on Results of Rahu Antardasha' },
+    58: { hindi: 'जीवान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Jupiter Antardasha' },
+    59: { hindi: 'शन्यन्तर्दशाफलाध्यायः', english: 'Chapter on Results of Saturn Antardasha' },
+    60: { hindi: 'बुधान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Mercury Antardasha' },
+    61: { hindi: 'केत्वन्तर्दशाफलाध्यायः', english: 'Chapter on Results of Ketu Antardasha' },
+    62: { hindi: 'शुक्रान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Venus Antardasha' },
+    63: { hindi: 'प्रत्यन्तर्दशाफलाध्यायः', english: 'Chapter on Results of Pratyantar Dasha' },
+    64: { hindi: 'सूक्ष्मान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Sukshmantardasha' },
+    65: { hindi: 'प्राणदशाफलाध्यायः', english: 'Chapter on Results of Pranadasha' },
+    66: { hindi: 'कालचक्रान्तर्दशाफलाध्यायः', english: 'Chapter on Results of Kalachakra Antardasha' },
+    67: { hindi: 'कालचक्रनवांशदशाफलाध्यायः', english: 'Chapter on Results of Kalachakra Navamsha Dasha' },
+    68: { hindi: 'अष्टकवर्गाध्यायः', english: 'Chapter on Ashtakavarga' },
+    69: { hindi: 'त्रिकोणशोधनाध्यायः', english: 'Chapter on Trikona Shodhana' },
+    70: { hindi: 'एकाधिपत्यशोधनाध्यायः', english: 'Chapter on Ekadhipatya Shodhana' },
+    71: { hindi: 'पिण्डसाधनाध्यायः', english: 'Chapter on Pinda Sadhana' },
+    72: { hindi: 'अष्टकवर्गफलाध्यायः', english: 'Chapter on Results of Ashtakavarga' },
+    73: { hindi: 'अष्टकवर्गायुर्दायाध्यायः', english: 'Chapter on Longevity Calculation from Ashtakavarga' },
+    74: { hindi: 'समुदायाष्टकवर्गाध्यायः', english: 'Chapter on Samudaya Ashtakavarga' },
+    75: { hindi: 'रश्मिफलाध्यायः', english: 'Chapter on Results of Rashmis' },
+    76: { hindi: 'सुदर्शनचक्रफलाध्यायः', english: 'Chapter on Results of Sudarshana Chakra' },
+    77: { hindi: 'पञ्चमहापुरुषलक्षणाध्यायः', english: 'Chapter on Characteristics of Five Great Men' },
+    78: { hindi: 'पञ्चमहाभूतफलाध्यायः', english: 'Chapter on Results of Five Great Elements' },
+    79: { hindi: 'सत्त्वादिगुणफलाध्यायः', english: 'Chapter on Qualities like Sattva' },
+    80: { hindi: 'नष्टजातकाध्यायः', english: 'Chapter on Lost Horoscopes' },
+    81: { hindi: 'प्रव्रज्यायोगाध्यायः', english: 'Chapter on Yogas for Renunciation' },
+    82: { hindi: 'स्त्रीजातकाध्यायः', english: 'Chapter on Female Horoscopes' },
+    83: { hindi: 'अङ्गलक्षणफलाध्यायः', english: 'Chapter on Results of Body Marks' },
+    84: { hindi: 'तिलादिलाञ्छनफलाध्यायः', english: 'Chapter on Results of Moles etc.' },
+    85: { hindi: 'पूर्वजन्मशापद्योतनाध्यायः', english: 'Chapter on Indicating Curses from Past Births' },
+    86: { hindi: 'ग्रहशान्त्यध्यायः', english: 'Chapter on Planetary Pacification' },
+    87: { hindi: 'अशुभजन्मकथनाध्यायः', english: 'Chapter on Describing Inauspicious Births' },
+    88: { hindi: 'दर्शजन्मशान्त्यध्यायः', english: 'Chapter on Pacification for Amavasya Birth' },
+    89: { hindi: 'कृष्णचतुर्दशीजन्मशान्त्यध्यायः', english: 'Chapter on Pacification for Krishna Chaturdashi Birth' },
+    90: { hindi: 'भद्रावमदुर्योगशान्त्यध्यायः', english: 'Chapter on Pacification for Bhadra and Avama Bad Yogas' },
+    91: { hindi: 'एक नक्षत्रजनननशान्त्यध्यायः', english: 'Chapter on Pacification for Birth in One Nakshatra' },
+    92: { hindi: 'संक्रान्तिजन्मशान्त्यध्यायः', english: 'Chapter on Pacification for Sankranti Birth' },
+    93: { hindi: 'ग्रहणजननशान्त्यध्यायः', english: 'Chapter on Pacification for Eclipse Birth' },
+    94: { hindi: 'गण्डान्तजननशान्त्यध्यायः', english: 'Chapter on Pacification for Gandanta Birth' },
+    95: { hindi: 'भुक्तमूलजननशान्त्यध्यायः', english: 'Chapter on Pacification for Bhuktamoola Birth' },
+    96: { hindi: 'ज्येष्ठादिगण्डजननशान्त्यध्यायः', english: 'Chapter on Pacification for Jyeshtha etc. Gandanta Birth' },
+    97: { hindi: 'त्रीतरजन्मशान्त्यध्यायः', english: 'Chapter on Pacification for Treetar Birth' },
+    98: { hindi: 'प्रसवविकारशान्त्यध्यायः', english: 'Chapter on Pacification for Birth Defects' },
+    99: { hindi: 'उपसंहाराध्यायः', english: 'Concluding Chapter' }
+  };
+  
+  const chapters = [];
+  for (let i = 11; i <= 99; i++) {
+    chapters.push(i);
+  }
+  
+  return chapters.map(chapterNum => {
+    if (!filterChapter(chapterNum)) return null;
+    const chapterInfo = chapterNames[chapterNum];
+    return (
+      <div key={chapterNum} style={{
+        border: '1px solid var(--ifm-color-emphasis-300)',
+        borderRadius: '8px',
+        padding: '1.25rem',
+        backgroundColor: 'var(--ifm-background-surface-color)',
+        transition: 'all 0.2s ease',
+        cursor: 'pointer',
+        opacity: chapterInfo ? 1 : 0.7
+      }} onMouseEnter={(e) => {
+        e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+        e.currentTarget.style.transform = 'translateY(-2px)';
+      }} onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'none';
+        e.currentTarget.style.transform = 'translateY(0)';
+      }}>
+        <div style={{ fontSize: '0.875rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.5rem' }}>
+          ({toDevanagari(chapterNum)}) Chapter {chapterNum}
+        </div>
+        <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem' }}>
+          {chapterInfo ? (
+            chapterInfo.link ? (
+              <a href={chapterInfo.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <span className="hindi">{chapterInfo.hindi}</span>
+              </a>
+            ) : (
+              <span className="hindi">{chapterInfo.hindi}</span>
+            )
+          ) : (
+            <span className="hindi">अध्याय {chapterNum}</span>
+          )}
+        </h3>
+        <p style={{ margin: '0', fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)' }}>
+          {chapterInfo ? chapterInfo.english : 'Chapter ' + chapterNum}
+        </p>
+      </div>
+    );
+  });
+})()}
+
+</div>
+    </>
+  );
+})()}

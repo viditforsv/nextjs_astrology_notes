@@ -1,0 +1,12 @@
+- property in conflict
+- mother in rin, rog shatru
+- you can have problem with mother
+- property in litigation. 
+- Shubh 
+	- Discipline main man
+- malefic - Mother will fall sick or may die early. 
+	- with mars relation - conflict
+	- Bad Character
+- Character from 4H and 4L
+- 
+

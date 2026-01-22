@@ -1,0 +1,18 @@
+- Mars always wants to win
+- Sun - Jyoti 
+- Mars - Fire
+- Lagn is Agya Chakr - #generalPrinciple 
+- Maglik relation: 1H, 2H, 4H, 7H, 8H and 12H relation makes the person manglik
+	- see this from lagn and chandra kundli as well
+- Shani, Mangal, Rahu ketu jahan bhi hote hain to kuch na kuch aristht to karte hi hai #generalPrinciple 
+- 5H is house of speculation #bhava 
+- Mars is an intellectual and technical planet
+- 4H is matr bhumi #bhava 
+- Mars - Karaka for property
+- Mars - Biggest risk taker
+- Disciplined and attractive
+- Mars +venus combination - physical attraction and high sexual drive
+	- desire for extra maritial affair
+- Mars relation with 11H - then the person can keep a deep secret
+- Mars is loner, brahmachari. 
+- 

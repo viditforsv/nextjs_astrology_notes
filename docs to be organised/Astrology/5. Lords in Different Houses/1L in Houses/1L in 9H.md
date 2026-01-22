@@ -1,0 +1,32 @@
+### 9th House
+[[9H]]
+- Kendra Trikona combo
+- Fortunate, devoted to lord vishnu,
+- Wives, sons
+- Good speech and communication
+- Sun is karaka of 9H
+- Mars is in friendly house
+- Good for father as well and the upcoming child of native
+- Benefic
+	- Religious
+	- Guru bhakt, dharmik
+- Afflicted
+	- Luck will collapse
+	- Poor religious belief
+	- Bad for father
+- eg: Scorpio
+	- 1L Mars in 9th House(Karka Rashi) - Neech
+	- Big conflicts with father
+- eg: Mercury in 9H
+	- From friends
+- eg: Ju - 
+	- When you find guru or when you have your first child
+	- 
+- eg: Ve 
+	- Luck when you get married
+- eg: Mar
+	- When you have a sibling
+- eg: Sat
+	- देर से बहग्या वृद्धि होगी 
+- eg: Ra/Ke
+	- In foreign lands

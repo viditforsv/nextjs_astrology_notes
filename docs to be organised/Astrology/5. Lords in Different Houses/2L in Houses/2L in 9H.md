@@ -1,0 +1,14 @@
+### 9th House
+- 8th from own house
+- Person has to leave their father to become wealthy
+	- Sacrifice family to become very lucky
+- Dhan in Bhagya
+- Earn from Spirituality, Temples
+- Earn through foreign also
+- Sickly in childhood but happy in remaining years
+	- when native is with father , then because of the influence of maraka
+- Religious
+	- Initial sanskars into Dharma, temples and shrines
+- More money means more luck
+- Earn through speaking
+	- Why?

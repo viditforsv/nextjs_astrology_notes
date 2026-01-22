@@ -1,0 +1,228 @@
+:root {
+    --ifm-font-family-base: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --ifm-font-family-monospace: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+  
+  /* Apply Lato globally */
+  body {
+    font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+/* Fix text selection color in dark mode */
+::selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+/* Dark mode specific selection colors */
+.dark ::selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+.dark ::-moz-selection {
+  background-color: #667eea;
+  color: #ffffff;
+}
+
+/* Docusaurus sidebar styling - using Docusaurus classes */
+.dark .menu__link--active {
+  color: #ffffff;
+}
+
+.dark .menu__link--active:hover {
+  color: #ffffff;
+}
+
+/* Hindi text styling */
+.hindi {
+  font-weight: 500;
+  color: #667eea;
+}
+
+.dark .hindi {
+  color: #a78bfa;
+}
+
+/* Collapsible meanings component */
+.collapsible-meanings-wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.collapsible-meanings-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.collapsible-meanings-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.collapsible-meanings-btn.is-open {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.collapsible-meanings-content {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.dark .collapsible-meanings-btn {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .collapsible-meanings-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark .collapsible-meanings-btn.is-open {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .collapsible-meanings-content {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Sidebar collapse/expand all buttons */
+.sidebar-collapse-controls {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 8px;
+}
+
+.sidebar-collapse-btn {
+  flex: 1;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.sidebar-collapse-btn:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+.dark .sidebar-collapse-btn {
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+.dark .sidebar-collapse-btn:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+/* Elegant sidebar menu arrow replacement */
+/* Hide the default Docusaurus arrow/wedge */
+.menu__link--sublist::after {
+  display: none !important;
+}
+
+/* Add elegant chevron icon */
+.menu__link--sublist {
+  position: relative;
+  padding-right: 2rem;
+}
+
+.menu__link--sublist::before {
+  content: '';
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid currentColor;
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+}
+
+/* Rotate chevron when expanded */
+.menu__list-item--collapsible.menu__list-item--collapsed .menu__link--sublist::before {
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.menu__list-item--collapsible:not(.menu__list-item--collapsed) .menu__link--sublist::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* Hover effect */
+.menu__link--sublist:hover::before {
+  opacity: 0.8;
+}
+
+/* Active state */
+.menu__link--sublist.menu__link--active::before {
+  opacity: 1;
+}

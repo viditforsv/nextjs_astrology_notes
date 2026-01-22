@@ -1,0 +1,4 @@
+The Rule of 273: The average gestation is roughly 273 days (9 months).
+The Calculation: Astrologers take your tentative birth chart and run a specific formula (involving Saturn, Gulika, and the Moon) to calculate backwards.
+
+Sperm is released into the female partner. This is called the nisheka, which literally means sprinkling or infusion and in this context means ejaculation (Moon is karaka). The released sperm travel into the womb to fertilize the female ovum (egg) which can take anywhere from ten hours to five days. Every text containing the topic of nisheka begins with calculations for the menstruation cycle, and how it relates to Moon and Mars. Ovulation (Rtukala [1]) was understood to be sixteen days from the beginning of menstruation or twelve days from the end of it.

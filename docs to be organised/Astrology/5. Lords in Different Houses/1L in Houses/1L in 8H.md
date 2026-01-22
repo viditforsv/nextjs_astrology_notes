@@ -1,0 +1,32 @@
+### 8th House
+[[8H]]
+- Benefic
+	- Well placed lagnesh can make the Native "Siddha Vidhya Visharada", having knowledge of occult powers
+	- Wealth from parental properties
+	- Wealth from speculation
+- Malefic 
+	- Sickly, thievish
+	- Interested in other's wives
+	- Gambling
+- Jupiter, mars and venus can be well placed in this house
+	- Jupiter is Dhanu lagna, then guru is in karka in 8H
+		- Siddha Vidhya Visharada
+	- Mars - if Mesh Rashi then can be swarashi in 8H
+		- Sense of occult
+	- Venus - if Tula rashi, then Vrishabh will be 8H
+		- Pandit
+- Worst houses if not managed
+	- Complaining nature
+	- Poor health
+	- gambling and speculation
+	- Into sex and into other people's wife
+- If under influence of a benefic planet then -ves will be cured by that
+- Remedy
+	- Do something auspicious with 8H like Pranayama, astrology etc
+- eg: If Moon in 8H, then you have to practice meditation
+	- Neech Rashi, Vrischik, for moon in KP Chart
+	- Kumbh Rashi if Moon is 1L, not a good rashi for moon anyways
+	- some issues in life always
+	- Sadness always follows happiness
+	- Lacks confidence
+- 

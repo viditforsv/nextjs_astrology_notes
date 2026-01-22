@@ -1,0 +1,10 @@
+- Moon in 1H lots of dreams
+- Moon ka relation with 1H gives a lot of dreams
+- Subah ke sapne sach hote hain
+	- sun is on lagn at that time, sun has vision, moon also have vision
+	- that means jo sun 
+- 3H or 5H sun or moon then dreams aate hain
+- Remedy - 
+	- surya namaskar se, sote samay music, sound therapy, praying to sun in any form. 
+	- Do not watch disturbing content
+	- Paani ka jug paas main rakh kar sone se

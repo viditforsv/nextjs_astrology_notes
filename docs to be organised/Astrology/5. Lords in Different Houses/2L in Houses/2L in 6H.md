@@ -1,0 +1,14 @@
+### 6th House
+- 2L in 6H
+- Profession
+	- Very good for medical profession
+- 2L is 5th from itself
+	- Can get loans easily and repay them
+- Never take loans if 2L in 6H or 6L in 2H and the planet is malefic. Wont be able to repay loans. 
+- Malefic
+	- 2H is 8th from 7th ; in 6H 2L is 12th from 7th
+	- Break the marriage
+	- Loss because of enemies/competition
+- Benefic
+	- Earn from enemies/competition
+	- Do business full of competition

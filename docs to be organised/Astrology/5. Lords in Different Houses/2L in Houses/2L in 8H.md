@@ -1,0 +1,16 @@
+### 8th House
+- Inheritance after a loss since 8H is house of loss or Kastha
+	- eg: Ve: Diamonds as in
+	- eg: Me: Cash
+	- eg: Ju - Gold
+	- eg: Mo - Financial instruments
+	- eg: Sa - Land
+	- eg: Ke - Buildings
+- Drishti on 2H
+	- Protect the house
+	- Give wealth after loss
+- Can make native an astrologer
+- 2H is initial sanskar, that shows that someone in family is meditating
+- Malefic
+	- Money is going into dirt
+- Sometimes native would like to cheat for money

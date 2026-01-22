@@ -1,0 +1,24 @@
+### 6th House
+[[6H - Tripu Sthan]]
+- Lack of body pleasure
+- Diseases
+- Poor immunity
+- Malefic
+	- trouble from enemies entire life
+- Benefic
+	- Good position in army or medical field
+	- eg: Vrishabh lagna, venus in 6H swarashi in Tula.
+	- eg: mars in Vrischik lagn, swarashi in 6H in mesh lagna
+	- Native will have power to destroy the enemy
+- Ju is the only planet if in 6H as 1L wont damage the house. 
+	- destroy the enemies. No enemies
+	- aspect on 12H
+		- reduce expenses
+	- aspect on 10H
+		- work improves
+	- aspect on 2H
+		- wealth increases
+- Health issues will anyways be there, if malefic planet then issues with enemies as well. 
+- eg: Kanya Rashi in 6H
+	- Rahu in 6H, then native will experience back ache. 
+- 

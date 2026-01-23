@@ -36,6 +36,9 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "backup_2026-01-22",
+    "pages_backup_2026-01-15",
+    "src/pages"
   ]
 }

@@ -82,12 +82,28 @@
 
 /* Hindi text styling */
 .hindi {
+  font-family: 'Noto Sans Devanagari', 'Mukta', 'Hind', sans-serif;
   font-weight: 500;
   color: #667eea;
 }
 
 .dark .hindi {
   color: #a78bfa;
+}
+
+/* Nirmala Vishnu specific styling */
+.nirmalaVishnu {
+  font-family: 'Noto Sans Devanagari', 'Mukta', 'Hind', sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.nirmalaVishnu p {
+  line-height: 1.2 !important;
+}
+
+.dark .nirmalaVishnu {
+  color: #ffffff;
 }
 
 /* Collapsible meanings component */

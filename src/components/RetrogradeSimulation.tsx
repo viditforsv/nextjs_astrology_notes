@@ -25,7 +25,7 @@ export default function RetrogradeSimulation() {
           Open Retrograde Motion Simulation →
         </a>
         <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--ifm-color-content-secondary)', fontStyle: 'italic' }}>
-          Interactive simulation showing apparent retrograde movement of planets from Earth's perspective. 
+          Interactive simulation showing apparent retrograde movement of planets from Earth&apos;s perspective. 
           You can switch between heliocentric and geocentric models and adjust simulation parameters.
         </p>
       </div>
@@ -60,7 +60,7 @@ export default function RetrogradeSimulation() {
         }}
       />
       <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--ifm-color-content-secondary)', fontStyle: 'italic' }}>
-        Interactive simulation showing apparent retrograde movement of planets from Earth's perspective. 
+        Interactive simulation showing apparent retrograde movement of planets from Earth&apos;s perspective. 
         You can switch between heliocentric and geocentric models and adjust simulation parameters.
       </p>
     </div>

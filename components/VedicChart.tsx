@@ -15,6 +15,10 @@ interface VedicChartProps {
   crossHouses?: number[]
   checkHouses?: number[]
   houseNumbers?: { [house: number]: number }
+  onHouseClick?: (houseNumber: number) => void
+  highlightedHouse?: number
+  houseRashis?: { [house: number]: number } // Rashi number (1-12) for each house
+  onPlanetDrop?: (planetName: string, houseNumber: number) => void
 }
 
 // Theme configuration
@@ -26,6 +30,8 @@ const theme = {
   strokeColor: '#000000',
   houseStrokeWidth: 2,
   lineStrokeWidth: 1.5,
+  houseBorderColor: '#d1d5db', // Light gray for house boundaries
+  houseBorderWidth: 1,
 }
 
 // Planet symbols mapping with Hindi names
@@ -106,22 +112,22 @@ function generateNorthIndianHouses(center: number, midpoint: number, squareSize:
       center: { x: center * 1.5, y: center * 1.8 } 
     },
     { 
-      points: `${squareSize},${squareSize} ${center-midpoint},${center+midpoint} ${squareSize},${center}`, 
+      points: `${center+midpoint},${center+midpoint} ${squareSize},${center} ${squareSize},${squareSize}`, 
       label: "9", 
       center: { x: center * 1.85, y: center * 1.5 } 
     },
     { 
-      points: `${squareSize},${center} ${center-midpoint},${center+midpoint} ${center},${center} ${center-midpoint},${center-midpoint}`, 
+      points: `${center+midpoint},${center-midpoint} ${center},${center} ${center+midpoint},${center+midpoint} ${squareSize},${center}`, 
       label: "10", 
       center: { x: center * 1.5, y: center } 
     },
     { 
-      points: `${squareSize},${center} ${center-midpoint},${center-midpoint} ${squareSize},0`, 
+      points: `${center+midpoint},${center-midpoint} ${squareSize},${center} ${squareSize},0`, 
       label: "11", 
       center: { x: center * 1.85, y: center * 0.5 } 
     },
     { 
-      points: `${squareSize},0 ${center-midpoint},${center-midpoint} ${center},0`, 
+      points: `${squareSize},0 ${center+midpoint},${center-midpoint} ${center},0`, 
       label: "12", 
       center: { x: center * 1.5, y: center * 0.2 } 
     },
@@ -216,7 +222,11 @@ export default function VedicChart({
   size = 300,
   crossHouses = [],
   checkHouses = [],
-  houseNumbers = {}
+  houseNumbers = {},
+  onHouseClick,
+  highlightedHouse,
+  houseRashis = {},
+  onPlanetDrop
 }: VedicChartProps) {
   // Memoize geometry calculations
   const geometry = useMemo(() => computeGeometry(size), [size])
@@ -280,6 +290,45 @@ export default function VedicChart({
     }).filter(Boolean) as Array<{ houseNum: number; number: number; x: number; y: number }>
   }, [houseNumbers, houses, planets, showLabels])
 
+  // Helper function to check if point is in polygon
+  const isPointInPolygon = (x: number, y: number, points: number[][]): boolean => {
+    let inside = false
+    for (let i = 0, j = points.length - 1; i < points.length; j = i++) {
+      const xi = points[i][0], yi = points[i][1]
+      const xj = points[j][0], yj = points[j][1]
+      const intersect = ((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)
+      if (intersect) inside = !inside
+    }
+    return inside
+  }
+
+  const handleSvgDrop = (e: React.DragEvent<SVGSVGElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+    const planetName = e.dataTransfer.getData('planet') || e.dataTransfer.getData('text/plain')
+    if (planetName && onPlanetDrop) {
+      // Get mouse position relative to SVG
+      const rect = e.currentTarget.getBoundingClientRect()
+      const x = e.clientX - rect.left
+      const y = e.clientY - rect.top
+      
+      // Scale coordinates to viewBox coordinates
+      const scale = squareSize / size
+      const viewBoxX = x * scale
+      const viewBoxY = y * scale
+      
+      // Find which house contains this point
+      for (let i = 0; i < houses.length; i++) {
+        const house = houses[i]
+        const points = house.points.split(' ').map(p => p.split(',').map(Number))
+        if (isPointInPolygon(viewBoxX, viewBoxY, points)) {
+          onPlanetDrop(planetName, i + 1)
+          return
+        }
+      }
+    }
+  }
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
       <svg 
@@ -287,27 +336,111 @@ export default function VedicChart({
         height={size} 
         viewBox={`0 0 ${squareSize} ${squareSize}`}
         style={{ maxWidth: '100%', height: 'auto' }}
+        onDrop={handleSvgDrop}
+        onDragOver={(e) => {
+          e.preventDefault()
+          e.stopPropagation()
+        }}
       >
         {/* Draw houses */}
-        {houses.map((house, index) => (
+        {houses.map((house, index) => {
+          const houseNumber = index + 1
+          const isHighlighted = highlightedHouse === houseNumber
+          const isClickable = !!onHouseClick
+          
+          return (
           <g key={index}>
             <polygon
               points={house.points}
-              fill="none"
-            />
-            {showLabels && (
+                fill={isHighlighted ? 'rgba(102, 126, 234, 0.2)' : 'none'}
+                stroke={isHighlighted ? '#667eea' : theme.houseBorderColor}
+                strokeWidth={isHighlighted ? 2 : theme.houseBorderWidth}
+                style={{
+                  cursor: (isClickable || onPlanetDrop) ? 'pointer' : 'default',
+                  transition: 'all 0.2s ease'
+                }}
+                onClick={() => onHouseClick?.(houseNumber)}
+                onDrop={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  const planetName = e.dataTransfer.getData('planet')
+                  if (planetName && onPlanetDrop) {
+                    onPlanetDrop(planetName, houseNumber)
+                  }
+                  // Reset visual state
+                  e.currentTarget.setAttribute('fill', isHighlighted ? 'rgba(102, 126, 234, 0.2)' : 'none')
+                  e.currentTarget.setAttribute('stroke', isHighlighted ? '#667eea' : theme.houseBorderColor)
+                }}
+                onDragOver={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  if (onPlanetDrop) {
+                    e.currentTarget.setAttribute('fill', 'rgba(102, 126, 234, 0.25)')
+                    e.currentTarget.setAttribute('stroke', '#667eea')
+                    e.currentTarget.setAttribute('stroke-width', '2')
+                  }
+                }}
+                onDragEnter={(e) => {
+                  e.preventDefault()
+                  e.stopPropagation()
+                  if (onPlanetDrop) {
+                    e.currentTarget.setAttribute('fill', 'rgba(102, 126, 234, 0.25)')
+                    e.currentTarget.setAttribute('stroke', '#667eea')
+                  }
+                }}
+                onDragLeave={(e) => {
+                  if (onPlanetDrop) {
+                    e.currentTarget.setAttribute('fill', isHighlighted ? 'rgba(102, 126, 234, 0.2)' : 'none')
+                    e.currentTarget.setAttribute('stroke', isHighlighted ? '#667eea' : theme.houseBorderColor)
+                    e.currentTarget.setAttribute('stroke-width', isHighlighted ? '2' : theme.houseBorderWidth.toString())
+                  }
+                }}
+                onMouseEnter={(e) => {
+                  if (isClickable && !onPlanetDrop) {
+                    e.currentTarget.setAttribute('fill', 'rgba(102, 126, 234, 0.1)')
+                    if (!isHighlighted) {
+                      e.currentTarget.setAttribute('stroke', '#667eea')
+                      e.currentTarget.setAttribute('stroke-width', '1.5')
+                    }
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (isClickable && !isHighlighted && !onPlanetDrop) {
+                    e.currentTarget.setAttribute('fill', 'none')
+                    e.currentTarget.setAttribute('stroke', theme.houseBorderColor)
+                    e.currentTarget.setAttribute('stroke-width', theme.houseBorderWidth.toString())
+                  }
+                }}
+              />
+              {showLabels && !houseRashis[houseNumber] && (
               <text
                 x={house.center.x}
                 y={house.center.y}
                 fontSize="12"
                 textAnchor="middle"
-                fill={theme.labelColor}
+                  fill={isHighlighted ? theme.planetColor : theme.labelColor}
+                  fontWeight={isHighlighted ? 'bold' : 'normal'}
+                  style={{ cursor: isClickable ? 'pointer' : 'default', pointerEvents: 'none' }}
               >
                 भाव {house.label}
               </text>
             )}
-          </g>
-        ))}
+              {houseRashis[houseNumber] && (
+                <text
+                  x={house.center.x}
+                  y={house.center.y}
+                  fontSize="14"
+                  textAnchor="middle"
+                  fill={isHighlighted ? theme.planetColor : theme.labelColor}
+                  fontWeight="bold"
+                  style={{ cursor: isClickable ? 'pointer' : 'default', pointerEvents: 'none' }}
+                >
+                  {houseRashis[houseNumber]}
+                </text>
+              )}
+            </g>
+          )
+        })}
 
         {/* Draw outer square */}
         <rect
@@ -371,6 +504,28 @@ export default function VedicChart({
           stroke={theme.strokeColor}
           strokeWidth={theme.lineStrokeWidth}
         />
+
+        {/* Draw intersection point markers (no labels) */}
+        {/* Center point O */}
+        <circle cx={center} cy={center} r="3" fill={theme.strokeColor} />
+
+        {/* Corner points: A, B, C, D */}
+        <circle cx="0" cy={squareSize} r="3" fill={theme.strokeColor} />
+        <circle cx={squareSize} cy={squareSize} r="3" fill={theme.strokeColor} />
+        <circle cx={squareSize} cy="0" r="3" fill={theme.strokeColor} />
+        <circle cx="0" cy="0" r="3" fill={theme.strokeColor} />
+
+        {/* Midpoint points: A', B', C', D' */}
+        <circle cx={center} cy={squareSize} r="3" fill={theme.strokeColor} />
+        <circle cx={squareSize} cy={center} r="3" fill={theme.strokeColor} />
+        <circle cx={center} cy="0" r="3" fill={theme.strokeColor} />
+        <circle cx="0" cy={center} r="3" fill={theme.strokeColor} />
+
+        {/* Inner intersection points: P, Q, R, S */}
+        <circle cx={center - midpoint} cy={center - midpoint} r="3" fill={theme.strokeColor} />
+        <circle cx={center + midpoint} cy={center - midpoint} r="3" fill={theme.strokeColor} />
+        <circle cx={center + midpoint} cy={center + midpoint} r="3" fill={theme.strokeColor} />
+        <circle cx={center - midpoint} cy={center + midpoint} r="3" fill={theme.strokeColor} />
 
         {/* Draw planets */}
         {planetPositions.map(({ planet, x, y, houseNum }, index) => {
